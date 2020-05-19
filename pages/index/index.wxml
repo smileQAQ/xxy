@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>  
+<view class='container' style='margin-top: {{height}}px'>
+  <view class='ad'>
+    <view class="backgroundColor"></view>
+    <navigator url="/pages/org-application/org-application"><image src="{{fisrt_image_addr}}" class="img"></image></navigator>
+  </view>
+
+  <view class="main">
+    <view class='topTabSwiper'>
+      <block wx:for="{{distList}}" wx:key="index">
+        <view 
+          class="tab {{currentData == index ? 'tabFouse': ''}}"
+          data-current="{{index}}"
+          bindtap="checkCurrent">
+          <image src="{{item.url}}"></image>
+          <text>{{item.text}}</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="content">
+      <view current="{{currentData}}" wx:if="{{currentData == 0}}">
+        <block wx:for="{{snodeol}}"  wx:for-item="items" wx:key="index">
+          <navigator class="content_items" url="/pages/org-introduction/org-introduction">
+            <view class="content_items_orgInfo">
+              <text style="color:rgba(47,47,47,1); font-weight:500;">{{items.org_name}}</text>
+              <view class="block">
+                <view class="lab">{{items.org_type}}</view>
+                <text class="distance">{{items.distance}}m</text>
+              </view>
+            </view>
+            <image lazy-load class="content_items_orgInfo_img" src="{{items.org_logo_addr}}"></image>
+          </navigator>
+        </block>  
+      </view> 
+
+      <view current="{{currentData}}" wx:elif="{{currentData == 1}}"> 
+        <block wx:for="{{[1,2,3]}}" wx:key="index">
+          <navigator class="content_activity">
+            <view class="content_activity_items"  >
+                <view class="desc">
+                  <text>发现附近专业平台</text>
+                  <text>上海外国语大学</text>
+                </view>
+                <view class="status">
+                  <view class="status_price">
+                    <text>单价 134</text>
+                  </view>
+                  <view class="status_addNum">
+                    <text>已拼 1340</text>
+                  </view>
+                </view>
+            </view>
+            <view>
+              <image class="content_activity_img" src="https://images.unsplash.com/photo-1567529684892-09290a1b2d05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"></image>
+            </view>
+          </navigator>
+        </block>
+      </view>
+
+      <view current="{{currentData}}" wx:elif="{{currentData == 2}}">
+        <block wx:for="{{[1,2,3]}}" wx:key="index">
+          <navigator class="content_teachInfo">
+              <view class="content_teachInfo_items">
+                <view>
+                  <text class="title">标题标题标题标题</text>
+                  <view class="label">热点</view>
+                </view>
+                <text>阅读量 134</text>
+              </view>
+              <text class="content_teachInfo_lookTxt">去看看></text>
+          </navigator>
+        </block>
+      </view>
+
+      <view class="content_blank"></view>
+    </view>
+  </view>
+
+  <view class="userBtn">
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">我的</button>
+    <view wx:else>请升级微信版本</view>
+  </view>
+</view>

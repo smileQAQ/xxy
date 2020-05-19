@@ -1,0 +1,19 @@
+<!--pages/org-introduction.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height}}px'>
+    <tabs 
+      tabs="{{tabs}}"
+      activeTab="{{activeTab}}"
+      tabUnderlineColor="{{activeColor}}"
+      activeClass="tab-bar-title__selected"
+    >
+    <view class="tab-content" slot="tab-content-0" >
+          asd
+    </view>
+      <!-- <block wx:for="{{tabs}}" wx:key="title">
+        <view class="tab-content" slot="tab-content-0" >
+          asd
+         </view>
+      </block> -->
+  </tabs>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/org-application/org-application.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>  
+<view class="application" style="margin-top:{{height}}px">
+  <view class="application_title">填写申请信息</view>
+  <view class="application_form">
+    <view class="application_form_item">
+      <text>学校名称</text>
+      <input type="text" placeholder-class="placeholder_input" placeholder="请输入学校名称"/>
+    </view>
+    <view class="application_form_item">
+      <text>联系人姓名</text>
+      <input type="text" placeholder-class="placeholder_input" placeholder="请输入联系人姓名"/>
+    </view>
+    <view class="application_form_item">
+      <text>联系电话</text>
+      <input type="number" placeholder-class="placeholder_input" placeholder="请输入联系电话"/>
+    </view>
+  </view>
+
+  <view class="application_send">
+    <view class="application_send_item">
+      <view style="display:inline-block;width:200rpx;height:200rpx;background-color:red"></view>
+      <view>扫一扫添加客服微信</view>
+    </view>
+    <view class="sendBtn">提交申请</view>
+  </view>
+</view>

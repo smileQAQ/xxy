@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/org-application/org-application",
+    "pages/index/index",
+    "pages/user-info/user-info",
+    "pages/org-introduction/org-introduction"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#22A1FF",
+    "navigationBarTitleText": "校营盈",
+    "navigationBarTextStyle": "white",
+    "navigationStyle":"custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+<!--pages/nav-bar/index.wxml-->
+<view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
+
+ <view class='nav-title'>
+      <image class="nav-back" wx:if='{{navbarData.showback}}' src="../../dist/image/back.png" bindtap="_navback"></image>
+      <view style='display:inline-block;line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+ </view>
+</view>

@@ -1,0 +1,1 @@
+.weui-tabs{width:100%}.weui-tabs-bar__wrp{width:100%;background:#fff}.weui-tabs-bar__content{display:flex;width:100%;height:60rpx;white-space:nowrap}.weui-tabs-bar__item{flex: 1; text-align: center;}.weui-tabs-bar__title{display:inline-block;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:transparent}
